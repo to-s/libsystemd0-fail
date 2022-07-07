@@ -1,0 +1,19 @@
+name: libsystemd0 fail
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  libsystemd-dev-install:
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: apt update
+        run: sudo apt update
+      - name: apt upgrade
+        run: sudo apt upgrade
+      - name: install libsystemd-dev
+        run: sudo install libsystemd-dev
+    
