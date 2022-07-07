@@ -15,5 +15,5 @@ jobs:
       - name: apt upgrade
         run: sudo apt upgrade
       - name: install libsystemd-dev
-        run: sudo install libsystemd-dev
+        run: sudo apt install libsystemd-dev -y
     
